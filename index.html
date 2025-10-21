@@ -5,14 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cheese Duck</title>
   <style>
+    /* ================= Dark Mode Colors ================= */
     :root {
-      --primary: #f7c948;
-      --surface: #fff9e6;
-      --on-surface: #333;
-      --card: #ffffff;
+      --primary: #f7c948;       /* Yellow accent */
+      --surface: #1e1e1e;       /* Dark background */
+      --on-surface: #e0e0e0;    /* Light text */
+      --card: #2a2a2a;          /* Card background */
       --radius: 20px;
-      --shadow: 0 4px 15px rgba(0,0,0,0.1);
+      --shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
+
+    /* ================= Global Styles ================= */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: "Google Sans", Arial, sans-serif;
@@ -22,7 +29,10 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
     }
+
+    /* ================= Card Styles ================= */
     .card {
       background: var(--card);
       border-radius: var(--radius);
@@ -30,27 +40,50 @@
       text-align: center;
       padding: 2rem;
       max-width: 350px;
+      width: 90%;
+      transition: box-shadow 0.3s;
     }
+
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+    }
+
+    /* ================= Image Styles ================= */
     img {
       width: 120px;
-      height: auto;
+      height: 120px;
+      object-fit: cover;
       border-radius: 50%;
+      border: 3px solid var(--primary);
+      margin-bottom: 1rem;
     }
+
+    /* ================= Typography ================= */
     h1 {
-      margin: 1rem 0 0.3rem;
-      color: var(--on-surface);
+      margin: 0.5rem 0 0.3rem;
+      color: var(--primary);
+      font-size: 1.8rem;
     }
+
     p {
       margin: 0.2rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
+
+    /* ================= Skills Badge ================= */
     .skills {
       margin-top: 1rem;
       background: var(--primary);
-      color: white;
+      color: #1e1e1e;
       padding: 0.6rem;
       border-radius: var(--radius);
       font-weight: bold;
+      font-size: 0.9rem;
+      transition: background 0.3s, color 0.3s;
     }
+
+    /* ================= Link Styles ================= */
     a {
       display: inline-block;
       margin-top: 1rem;
@@ -62,9 +95,26 @@
       border-radius: var(--radius);
       transition: 0.2s;
     }
+
     a:hover {
       background: var(--primary);
-      color: white;
+      color: var(--card);
+    }
+
+    /* ================= Responsive ================= */
+    @media (max-width: 400px) {
+      .card {
+        padding: 1.5rem;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -73,6 +123,15 @@
     <img src="tooy.png" alt="Cheese Duck">
     <h1>Cheese Duck</h1>
     <p>Just a normal person 😌</p>
+    <p>Too lazy to learn programming, so I use AI 🤖</p>
+    <div class="skills">
+      💻 Linux • Learning Git & CSS
+    </div>
+    <p>🌎 Country: USA</p>
+    <a href="https://github.com/tooy2" target="_blank">GitHub</a>
+  </div>
+</body>
+</html>    <p>Just a normal person 😌</p>
     <p>Too lazy to learn programming, so I use AI 🤖</p>
     <div class="skills">
       💻 Linux • Learning Git & CSS
