@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheese Duck</title>
+  <style>
+    :root {
+      --primary: #f7c948;
+      --surface: #fff9e6;
+      --on-surface: #333;
+      --card: #ffffff;
+      --radius: 20px;
+      --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    body {
+      margin: 0;
+      font-family: "Google Sans", Arial, sans-serif;
+      background: var(--surface);
+      color: var(--on-surface);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 2rem;
+      max-width: 350px;
+    }
+    img {
+      width: 120px;
+      height: auto;
+      border-radius: 50%;
+    }
+    h1 {
+      margin: 1rem 0 0.3rem;
+      color: var(--on-surface);
+    }
+    p {
+      margin: 0.2rem 0;
+    }
+    .skills {
+      margin-top: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem;
+      border-radius: var(--radius);
+      font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      border: 2px solid var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: 0.2s;
+    }
+    a:hover {
+      background: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.imgur.com/vqA8E5U.png" alt="Cheese Duck">
+    <h1>Cheese Duck</h1>
+    <p>أنا شخص طبيعي 😌</p>
+    <p>كسول جداً لأتعلم البرمجة، فأستخدم الذكاء الصناعي 🤖</p>
+    <div class="skills">
+      💻 Linux • يتعلم Git و CSS
+    </div>
+    <p>🌎 البلد: أمريكا</p>
+    <a href="https://github.com/tooy2" target="_blank">GitHub</a>
+  </div>
+</body>
+</html>
